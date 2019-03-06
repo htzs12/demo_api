@@ -3,7 +3,7 @@ from rest_framework import viewsets
 from .models import Map
 from .serializers import MapSerializers
 from django.views.generic.base import View
-from django.http import HttpResponse
+from django.http import HttpResponse,JsonResponse
 
 
 class MapView(viewsets.ModelViewSet):
@@ -19,7 +19,7 @@ def user(request):
     if request.method == 'POST':
         account = request.POST.get('account')
         passwd = request.POST.get('passwd')
-        print(account)
-        print(passwd)
+        if account = 'haoge' and passwd = '123456':
+            token = 'xxx123456xxx'
 
-    return HttpResponse('haha')
+    return JsonResponse(data=token,status_code=200)
