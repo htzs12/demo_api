@@ -8,10 +8,12 @@ from django.http import HttpResponse,JsonResponse
 
 class MapView(viewsets.ModelViewSet):
     queryset = Map.objects.all()
-    rec = request.META
-    body = request.body
-    print(rec)
-    print(body)
+
+    def get(self,request):
+        rec = request.META
+        body = request.body
+        print(rec)
+        print(body)
     serializer_class = MapSerializers
 
 
