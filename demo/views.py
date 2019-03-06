@@ -19,7 +19,7 @@ def user(request):
     if request.method == 'POST':
         account = request.POST.get('account')
         passwd = request.POST.get('passwd')
-        if account = 'haoge' and passwd = '123456':
+        if account == 'haoge' and passwd == '123456':
             token = 'xxx123456xxx'
 
     return JsonResponse(data=token,status_code=200)
