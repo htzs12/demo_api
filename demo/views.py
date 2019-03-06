@@ -10,14 +10,17 @@ class MapView(viewsets.ModelViewSet):
     queryset = Map.objects.all()
     serializer_class = MapSerializers
 
+
 """
 返回token
 """
+
+
 class UsersView(View):
-    def get(self,request):
+    def get(self, request):
         return HttpResponse('ok')
 
-    def post(self,request):
+    def post(self, request):
         account = request.POST.get('account')
         passwd = request.POST.get('passwd')
 
