@@ -17,9 +17,9 @@ class MapView(viewsets.ModelViewSet):
 
 def user(request):
     if request.method == 'POST':
-    account = request.POST.get('account')
-    passwd = request.POST.get('passwd')
-    print(account)
-    print(passwd)
+        account = request.POST.get('account')
+        passwd = request.POST.get('passwd')
+        print(account)
+        print(passwd)
 
     return HttpResponse('haha')
