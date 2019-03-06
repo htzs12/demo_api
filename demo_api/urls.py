@@ -26,7 +26,7 @@ route.register('demo',views.MapView)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    
+    path('users/',user,name='users'),
     path('',include(route.urls)),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]
