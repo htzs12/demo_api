@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path,include
 from rest_framework import routers
 from demo import views
+from demo.views import user
 
 
 route = routers.DefaultRouter()
@@ -25,6 +26,7 @@ route.register('demo',views.MapView)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    
     path('',include(route.urls)),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]
