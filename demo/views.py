@@ -21,4 +21,4 @@ def user(request):
         passwd = request.POST.get('passwd')
         if account == 'haoge' and passwd == '123456':
             data = {'token':'xxx123456xxx'}
-    return JsonResponse(data=token)
+    return JsonResponse(data=data)
