@@ -15,16 +15,11 @@ class MapView(viewsets.ModelViewSet):
 返回token
 """
 
+def user(request):
+    if request.method == 'POST':
+    account = request.POST.get('account')
+    passwd = request.POST.get('passwd')
+    print(account)
+    print(passwd)
 
-class UsersView(View):
-    def get(self, request):
-        return HttpResponse('ok')
-
-    def post(self, request):
-        account = request.POST.get('account')
-        passwd = request.POST.get('passwd')
-
-        print(account)
-        print(passwd)
-
-        return HttpResponse('haha')
+    return HttpResponse('haha')
