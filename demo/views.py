@@ -26,5 +26,5 @@ def user(request):
         account = request.POST.get('account')
         passwd = request.POST.get('passwd')
         if account == 'haoge' and passwd == '123456':
-            data = {'token':'xxx123456xxx','user_id':'111'}
+            data = {'token':'xxx123456xxx','user_id':'111','ret':400}
     return JsonResponse(data=data)
