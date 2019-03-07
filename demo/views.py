@@ -30,3 +30,11 @@ def user(request):
         else:
             data = {}
     return JsonResponse(data=data)
+
+
+def del_map(request):
+    if request.method == 'GET':
+        dev_id = request.GET.get('dev_id')
+        Map.objects.filter(dev_id=dev_id).delete()
+        print('删除设备成功，请刷新页面～')
+        return JsonResponse(status_code=200)
