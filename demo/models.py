@@ -12,7 +12,7 @@ class Map(models.Model):
     longitude = models.FloatField(verbose_name='经度')
     latitude = models.FloatField(verbose_name='纬度')
     dev_id = models.CharField(max_length=50,verbose_name='设备id')
-    status = models.BooleanField(default=True,verbose_name='设备状态')
+    status = models.IntegerField(default=1,verbose_name='设备状态')
     address = models.CharField(max_length=50,null=True, blank=True, verbose_name='监控地址')
     add_time = models.DateTimeField(default=datetime.now,verbose_name='添加时间')
 
