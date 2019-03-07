@@ -23,6 +23,7 @@ class MapView(viewsets.ModelViewSet):
 
 def user(request):
     if request.method == 'POST':
+        data = {}
         account = request.POST.get('account')
         passwd = request.POST.get('passwd')
         if account == 'haoge' and passwd == '123456':
